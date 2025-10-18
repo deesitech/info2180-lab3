@@ -14,5 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             }
         });
+        squares[i].addEventListener('mouseenter', () => {
+            if (!gameState[i]) {
+                squares[i].classList.add('hover');
+            }
+        });
+        squares[i].addEventListener('mouseleave', () => {
+            squares[i].classList.remove('hover');
+        });
     }
 });
